@@ -112,6 +112,19 @@ When user's prompt is NOT in English:
 - **Performance**: Measure first. Adhere to 2025 standards (Core Web Vitals).
 - **Infra/Safety**: 5-Phase Deployment. Verify secrets security.
 
+### 🐍 Environment Configuration (Runtime Mandatory)
+
+> 🔴 **MANDATORY:** All AI Agents MUST operate strictly within the isolated project environment to prevent system pollution.
+
+When executing ANY Python commands, scripts, or package installations, ALWAYS use the explicit virtual environment interpreter located at:
+`.\.venv\Scripts\python.exe`
+
+**Execution Rules:**
+
+- ❌ **FORBIDDEN:** Never run `python`, `python3`, or `pip` directly from the global system path.
+- ✅ **CORRECT:** `.\.venv\Scripts\python.exe .agent/scripts/checklist.py .`
+- **Intent:** This ensures the Agent operates in a reproducible, sandbox-safe environment and relies only on explicitly declared project dependencies.
+
 ### 📁 File Dependency Awareness
 
 **Before modifying ANY file:**
